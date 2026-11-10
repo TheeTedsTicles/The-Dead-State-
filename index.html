@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dead State™ | Official DayZ Community</title>
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #161a1f;
+            --accent-color: #8b263e;
+            --accent-hover: #a32e49;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #2a313c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(139, 38, 62, 0.15) 0%, rgba(13, 15, 18, 0) 100%);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .logo-area h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(139, 38, 62, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .logo-area h1 span {
+            font-size: 1.2rem;
+            vertical-align: super;
+            color: var(--accent-color);
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 60px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .server-status {
+            display: inline-block;
+            background-color: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #4ade80;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+
+        .info-list li span:first-child {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .info-list li span:last-child {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .full-width-card {
+            grid-column: 1 / -1;
+        }
+
+        .compliance-note {
+            background-color: rgba(139, 38, 62, 0.05);
+            border: 1px solid rgba(139, 38, 62, 0.2);
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>The Dead State<span>™</span></h1>
+            <p class="tagline">Premium Custom DayZ Community Network</p>
+            <div class="server-status">● Live & Unlocked</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Server Connection Info -->
+            <div class="card">
+                <h2>Server Access</h2>
+                <p>Join our high-performance UK-hosted Nitrado hardware platform. Open to players globally.</p>
+                <ul class="info-list">
+                    <li><span>Server Region</span><span>United Kingdom (UK)</span></li>
+                    <li><span>Slots</span><span>Public / Open Access</span></li>
+                    <li><span>Entry Fee</span><span>£0.00 (100% Free to Play)</span></li>
+                    <li><span>Queue Priority</span><span>Staff & Developers Only</span></li>
+                </ul>
+                <button class="btn" id="copy-btn" onclick="copyIP()">Copy Server IP & Port</button>
+            </div>
+
+            <!-- Community Rules Overview -->
+            <div class="card">
+                <h2>Community Hub</h2>
+                <p>We pride ourselves on providing an open, fair, and toxic-free apocalyptic multiplayer playground.</p>
+                <ul class="info-list">
+                    <li><span>Whitelist</span><span>None (Unlocked)</span></li>
+                    <li><span>Discord Network</span><span>Global Reach</span></li>
+                    <li><span>Support System</span><span>Active Admins</span></li>
+                    <li><span>Gameplay Style</span><span>Immersive Survival</span></li>
+                </ul>
+                <a href="#" class="btn" style="background-color: #5865F2;">Join Official Discord Network</a>
+            </div>
+
+            <!-- Server Monetization Rules -->
+            <div class="card full-width-card">
+                <h2>Server Monetization & Custom Bases</h2>
+                <p>In full compliance with the <strong>Bohemia Interactive Server Monetization Policy</strong>, our server infrastructure is completely free to enter and enjoy. We do not sell tier-based priority access or competitive item packs.</p>
+                
+                <p>To fund our monthly Nitrado hosting tier, community mod developments, and hardware maintenance, we offer premium custom base integration services:</p>
+                
+                <ul class="info-list">
+                    <li><span>Custom Base Structures</span><span>Cosmetic/structural only. No high-tier loot/weapons included.</span></li>
+                    <li><span>Refund Policy</span><span>All digital construction placement services are completely final.</span></li>
+                    <li><span>Wipe & Update Terms</span><span>Subject to routine game database maintenance and map resets.</span></li>
+                    <li><span>Fair Play Enforcement</span><span>Custom base tier holders are fully bound by standard server rules.</span></li>
+                </ul>
+
+                <div class="compliance-note">
+                    <strong>Bohemia Interactive Compliance Statement:</strong><br>
+                    All proceeds are treated as hardware infrastructure donations used directly to support server deployment and custom mod integrations. Priority queuing configurations are exclusively allocated to official administrators and active developers to facilitate server testing and moderation.
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 The Dead State™. All rights reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.75rem;">This server/community is not affiliated with or endorsed by Bohemia Interactive or Nitrado. DayZ is a registered trademark of Bohemia Interactive.</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyIP() {
+            // Adjust placeholders to match your real IP info if needed
+            const dummyText = "85.190.150.12:2302"; 
+            navigator.clipboard.writeText(dummyText).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerText = "IP Copied to Clipboard!";
+                setTimeout(() => {
+                    btn.innerText = "Copy Server IP & Port";
+                }, 2000);
+            }).catch(err => {
+                alert("Failed to copy server string. Please use: " + dummyText);
+            });
+        }
+    </script>
+</body>
+</html>
